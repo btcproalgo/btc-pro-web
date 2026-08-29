@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Activar BTC PRO</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07090f;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .card {
+      background: #10141d;
+      border: 1px solid #252b38;
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 68px;
+      height: 68px;
+      margin-bottom: 18px;
+      border: 2px solid #d7a928;
+      border-radius: 50%;
+      color: #d7a928;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #aeb6c6;
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .notice {
+      background: #161b26;
+      border-left: 3px solid #d7a928;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 25px;
+      color: #cbd1dc;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #303747;
+      border-radius: 9px;
+      background: #090c12;
+      color: #ffffff;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #d7a928;
+    }
+
+    input::placeholder {
+      color: #697386;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      border-radius: 9px;
+      padding: 15px;
+      background: #d7a928;
+      color: #080a0e;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    #message {
+      display: none;
+      margin-top: 20px;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #message.success {
+      display: block;
+      background: #0d281c;
+      border: 1px solid #1e6848;
+      color: #a8e6c7;
+    }
+
+    #message.error {
+      display: block;
+      background: #301517;
+      border: 1px solid #77363a;
+      color: #ffb5b9;
+    }
+
+    .help {
+      text-align: center;
+      margin-top: 24px;
+      color: #747e90;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .security {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid #252b38;
+      color: #747e90;
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 28px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+    <section class="card">
+
+      <div class="brand">
+        <div class="logo">BTC</div>
+
+        <h1>Activar BTC PRO</h1>
+
+        <p class="subtitle">
+          Completa tus datos para solicitar la activación
+          de tu acceso a BTC PRO.
+        </p>
+      </div>
+
+      <div class="notice">
+        Utiliza el mismo correo electrónico que usaste
+        al realizar tu suscripción.
+      </div>
+
+      <form id="activationForm">
+
+        <div class="field">
+          <label for="email">
+            Correo utilizado en el pago
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@email.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="tradingview">
+            Usuario de TradingView
+          </label>
+
+          <input
+            type="text"
+            id="tradingview"
+            name="tradingview"
+            placeholder="Tu usuario de TradingView"
+            autocomplete="off"
+            minlength="2"
+            maxlength="100"
+            required
+          >
+        </div>
+
+        <button
+          type="submit"
+          id="submitButton"
+        >
+          Solicitar activación
+        </button>
+
+        <div
+          id="message"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+      </form>
+
+      <p class="help">
+        La activación no es instantánea. Tu suscripción
+        deberá ser verificada antes de habilitar el acceso.
+      </p>
+
+      <div class="security">
+        BTC PRO nunca te solicitará contraseñas,
+        claves API, frases semilla ni credenciales
+        de acceso a TradingView.
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    const form =
+      document.getElementById("activationForm");
+
+    const button =
+      document.getElementById("submitButton");
+
+    const message =
+      document.getElementById("message");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      message.className = "";
+      message.style.display = "none";
+      message.textContent = "";
+
+      const email =
+        document
+          .getElementById("email")
+          .value
+          .trim()
+          .toLowerCase();
+
+      const tradingviewUsername =
+        document
+          .getElementById("tradingview")
+          .value
+          .trim();
+
+      if (!email || !tradingviewUsername) {
+        showMessage(
+          "Completa todos los campos.",
+          "error"
+        );
+
+        return;
+      }
+
+      /*
+       * En el siguiente paso conectaremos este formulario
+       * con el endpoint seguro de Cloudflare.
+       *
+       * Por ahora NO enviamos datos a ningún servidor.
+       */
+
+      button.disabled = true;
+      button.textContent = "Preparando activación...";
+
+      setTimeout(() => {
+        showMessage(
+          "Formulario listo. En el siguiente paso conectaremos la verificación de tu suscripción.",
+          "success"
+        );
+
+        button.disabled = false;
+        button.textContent = "Solicitar activación";
+      }, 500);
+    });
+
+    function showMessage(text, type) {
+      message.textContent = text;
+      message.className = type;
+      message.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

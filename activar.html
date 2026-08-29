@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Activar BTC PRO</title>
 
   <style>
@@ -199,8 +198,8 @@
       </div>
 
       <div class="notice">
-        Utiliza el mismo correo electrónico que usaste
-        al realizar tu suscripción.
+        Utiliza exactamente el mismo correo electrónico
+        que utilizaste al realizar tu suscripción.
       </div>
 
       <form id="activationForm">
@@ -216,6 +215,7 @@
             name="email"
             placeholder="tu@email.com"
             autocomplete="email"
+            maxlength="254"
             required
           >
         </div>
@@ -253,8 +253,8 @@
       </form>
 
       <p class="help">
-        La activación no es instantánea. Tu suscripción
-        deberá ser verificada antes de habilitar el acceso.
+        Tu suscripción será verificada antes de
+        registrar la solicitud de acceso.
       </p>
 
       <div class="security">
@@ -267,6 +267,9 @@
   </main>
 
   <script>
+    const ACTIVATION_ENDPOINT =
+      "https://btc-pro-stripe-webhook.btcproalgo.workers.dev/activate";
+
     const form =
       document.getElementById("activationForm");
 
@@ -279,9 +282,7 @@
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
-      message.className = "";
-      message.style.display = "none";
-      message.textContent = "";
+      clearMessage();
 
       const email =
         document
@@ -305,26 +306,73 @@
         return;
       }
 
-      /*
-       * En el siguiente paso conectaremos este formulario
-       * con el endpoint seguro de Cloudflare.
-       *
-       * Por ahora NO enviamos datos a ningún servidor.
-       */
-
       button.disabled = true;
-      button.textContent = "Preparando activación...";
+      button.textContent = "Verificando suscripción...";
 
-      setTimeout(() => {
+      try {
+        const response = await fetch(
+          ACTIVATION_ENDPOINT,
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+              email,
+              tradingviewUsername
+            })
+          }
+        );
+
+        let data = null;
+
+        try {
+          data = await response.json();
+        } catch {
+          data = null;
+        }
+
+        if (!response.ok) {
+          throw new Error(
+            data?.message ||
+            "No pudimos verificar tu suscripción."
+          );
+        }
+
         showMessage(
-          "Formulario listo. En el siguiente paso conectaremos la verificación de tu suscripción.",
+          data?.message ||
+          "Solicitud de activación recibida correctamente.",
           "success"
         );
 
+        form.reset();
+
+      } catch (error) {
+        console.error(
+          "Error de activación:",
+          error
+        );
+
+        showMessage(
+          error.message ||
+          "No pudimos procesar tu solicitud. Inténtalo nuevamente.",
+          "error"
+        );
+
+      } finally {
         button.disabled = false;
-        button.textContent = "Solicitar activación";
-      }, 500);
+        button.textContent =
+          "Solicitar activación";
+      }
     });
+
+    function clearMessage() {
+      message.textContent = "";
+      message.className = "";
+      message.style.display = "none";
+    }
 
     function showMessage(text, type) {
       message.textContent = text;

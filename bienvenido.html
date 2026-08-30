@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bienvenido a BTC PRO</title>
+
+  <meta
+    name="description"
+    content="Guía de configuración y activación de BTC PRO."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07090f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 9, 15, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #202532;
+    }
+
+    .header-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border: 2px solid #d7a928;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #d7a928;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .header-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px 17px;
+
+      border: 1px solid #d7a928;
+      border-radius: 9px;
+
+      color: #d7a928;
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .header-button:hover {
+      background: #d7a928;
+      color: #090b10;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 85px 0 55px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 8px 13px;
+      margin-bottom: 22px;
+
+      border: 1px solid #3e351c;
+      border-radius: 999px;
+
+      background: #16140d;
+      color: #e3bc46;
+
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0 auto;
+
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .gold {
+      color: #e0b32b;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      margin: 24px auto 0;
+
+      color: #aeb6c6;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 48px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 22px;
+
+      border-radius: 9px;
+      border: 1px solid transparent;
+
+      font-size: 15px;
+      font-weight: 750;
+
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #dcae25;
+      color: #090a0e;
+    }
+
+    .button-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      background: #111620;
+      border-color: #303745;
+      color: #ffffff;
+    }
+
+    .button-secondary:hover {
+      border-color: #d7a928;
+    }
+
+    /* =========================
+       PROGRESS
+    ========================= */
+
+    .progress-section {
+      width: min(1050px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .progress-card {
+      background: #10141d;
+      border: 1px solid #252b38;
+      border-radius: 16px;
+      padding: 26px;
+    }
+
+    .progress-card h2 {
+      margin-bottom: 6px;
+      font-size: 20px;
+    }
+
+    .progress-card p {
+      color: #9099aa;
+      font-size: 14px;
+    }
+
+    .progress-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+
+      margin-top: 22px;
+    }
+
+    .progress-step {
+      min-height: 76px;
+
+      padding: 12px;
+
+      background: #0b0e15;
+      border: 1px solid #252b38;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .progress-number {
+      color: #d7a928;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .progress-name {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    .main {
+      width: min(1050px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 45px 0 90px;
+    }
+
+    .section {
+      scroll-margin-top: 100px;
+
+      margin-bottom: 24px;
+      padding: 30px;
+
+      background: #10141d;
+      border: 1px solid #252b38;
+      border-radius: 16px;
+    }
+
+    .section-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .step-icon {
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #1b180f;
+      border: 1px solid #4d401d;
+      border-radius: 12px;
+
+      color: #e0b32b;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .section-title {
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    .section-subtitle {
+      margin-top: 6px;
+      color: #9ba4b5;
+      font-size: 15px;
+    }
+
+    .section-content {
+      margin-top: 24px;
+      padding-left: 66px;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 12px;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+
+      padding: 14px 16px;
+
+      background: #0b0e15;
+      border: 1px solid #242a36;
+      border-radius: 10px;
+    }
+
+    .check {
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 1px;
+
+      border-radius: 50%;
+      background: #26351b;
+      color: #9ed86c;
+
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .check-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .check-item p {
+      color: #9ca5b5;
+      font-size: 14px;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 16px 18px;
+
+      border-left: 3px solid #d7a928;
+      border-radius: 8px;
+
+      background: #171a21;
+      color: #c5cad4;
+
+      font-size: 14px;
+    }
+
+    .notice-danger {
+      border-left-color: #d85b5b;
+      background: #241516;
+    }
+
+    .notice-success {
+      border-left-color: #49a46f;
+      background: #102019;
+    }
+
+    .section-actions {
+      margin-top: 20px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* =========================
+       PARAMETER TABLE
+    ========================= */
+
+    .parameter-table {
+      margin-top: 18px;
+      overflow-x: auto;
+
+      border: 1px solid #272e3a;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid #272e3a;
+    }
+
+    th {
+      background: #161b25;
+      color: #d6dbe5;
+      font-size: 13px;
+    }
+
+    td {
+      color: #aab2c1;
+      font-size: 14px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .editable {
+      color: #e2b938;
+      font-weight: 700;
+    }
+
+    /* =========================
+       SECURITY
+    ========================= */
+
+    .security-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .security-item {
+      padding: 16px;
+
+      background: #0b0e15;
+      border: 1px solid #252b38;
+      border-radius: 10px;
+    }
+
+    .security-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .security-item p {
+      color: #9ba4b5;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FINAL CARD
+    ========================= */
+
+    .final-card {
+      margin-top: 30px;
+      padding: 40px 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #17130b 0%,
+          #10141d 55%
+        );
+
+      border: 1px solid #4b3d19;
+      border-radius: 18px;
+
+      text-align: center;
+    }
+
+    .final-card h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .final-card p {
+      max-width: 650px;
+      margin: 0 auto;
+
+      color: #aeb6c6;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      padding: 35px 20px;
+      border-top: 1px solid #202532;
+
+      text-align: center;
+      color: #737d90;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      margin-bottom: 12px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer a:hover {
+      color: #d7a928;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+      .progress-steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .section-content {
+        padding-left: 0;
+      }
+
+      .security-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .header-inner {
+        min-height: 64px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .header-button {
+        padding: 8px 11px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .progress-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section {
+        padding: 22px 18px;
+      }
+
+      .section-top {
+        gap: 13px;
+      }
+
+      .step-icon {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+      }
+
+      .section-title {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+      <div class="header-inner">
+
+        <a
+          href="index.html"
+          class="brand"
+        >
+          <div class="brand-logo">
+            BTC
+          </div>
+
+          <div class="brand-name">
+            BTC PRO
+          </div>
+        </a>
+
+        <a
+          href="activar.html"
+          class="header-button"
+        >
+          Solicitar acceso
+        </a>
+
+      </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="hero-badge">
+        ✓ Guía oficial de configuración
+      </div>
+
+      <h1>
+        Bienvenido a
+        <span class="gold">BTC PRO</span>
+      </h1>
+
+      <p class="hero-text">
+        Sigue esta guía en orden para solicitar tu acceso,
+        configurar BTC PRO y preparar correctamente tu
+        entorno de TradingView y automatización.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="#paso-1"
+          class="button button-primary"
+        >
+          Comenzar configuración
+        </a>
+
+        <a
+          href="activar.html"
+          class="button button-secondary"
+        >
+          Solicitar acceso
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROGRESS
+    ========================== -->
+
+    <section class="progress-section">
+
+      <div class="progress-card">
+
+        <h2>
+          Tu ruta de configuración
+        </h2>
+
+        <p>
+          Completa los pasos en este orden.
+        </p>
+
+        <div class="progress-steps">
+
+          <a
+            href="#paso-1"
+            class="progress-step"
+          >
+            <span class="progress-number">
+              PASO 01
+            </span>
+
+            <span class="progress-name">
+              Acceso
+            </span>
+          </a>
+
+          <a
+            href="#paso-2"
+            class="progress-step"
+          >
+            <span class="progress-number">
+              PASO 02
+            </span>
+
+            <span class="progress-name">
+              TradingView
+            </span>
+          </a>
+
+          <a
+            href="#paso-3"
+            class="progress-step"
+          >
+            <span class="progress-number">
+              PASO 03
+            </span>
+
+            <span class="progress-name">
+              BTC PRO
+            </span>
+          </a>
+
+          <a
+            href="#paso-4"
+            class="progress-step"
+          >
+            <span class="progress-number">
+              PASO 04
+            </span>
+
+            <span class="progress-name">
+              Riesgo
+            </span>
+          </a>
+
+          <a
+            href="#paso-5"
+            class="progress-step"
+          >
+            <span class="progress-number">
+              PASO 05
+            </span>
+
+            <span class="progress-name">
+              WunderTrading
+            </span>
+          </a>
+
+          <a
+            href="#paso-6"
+            class="progress-step"
+          >
+            <span class="progress-number">
+              PASO 06
+            </span>
+
+            <span class="progress-name">
+              Verificación
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main">
+
+
+      <!-- =========================
+           PASO 1
+      ========================== -->
+
+      <section
+        class="section"
+        id="paso-1"
+      >
+
+        <div class="section-top">
+
+          <div class="step-icon">
+            1
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              Solicita tu acceso a BTC PRO
+            </h2>
+
+            <p class="section-subtitle">
+              Este es el primer paso después de completar tu compra.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="section-content">
+
+          <div class="checklist">
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Utiliza el correo de tu compra
+                </strong>
+
+                <p>
+                  Debe ser exactamente el mismo correo
+                  utilizado durante el proceso de pago.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Escribe tu usuario exacto de TradingView
+                </strong>
+
+                <p>
+                  Revisa mayúsculas, minúsculas y caracteres
+                  antes de enviar la solicitud.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Envía una sola solicitud
+                </strong>
+
+                <p>
+                  Si tu suscripción está activa, el sistema
+                  registrará tu usuario para la activación.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="section-actions">
+
+            <a
+              href="activar.html"
+              class="button button-primary"
+            >
+              Abrir página de activación
+            </a>
+
+          </div>
+
+          <div class="notice">
+            El acceso a TradingView puede requerir una
+            validación manual. No realices una segunda compra
+            si todavía estás esperando activación.
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PASO 2
+      ========================== -->
+
+      <section
+        class="section"
+        id="paso-2"
+      >
+
+        <div class="section-top">
+
+          <div class="step-icon">
+            2
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              Comprueba tu acceso en TradingView
+            </h2>
+
+            <p class="section-subtitle">
+              Continúa únicamente después de que tu usuario
+              haya sido autorizado.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="section-content">
+
+          <div class="checklist">
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Inicia sesión en TradingView
+                </strong>
+
+                <p>
+                  Utiliza la misma cuenta cuyo nombre de usuario
+                  enviaste durante la activación.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Abre el gráfico que utilizarás
+                </strong>
+
+                <p>
+                  Verifica que estés utilizando el mercado,
+                  símbolo y temporalidad correspondientes
+                  a tu configuración.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Busca BTC PRO en tus scripts con acceso
+                </strong>
+
+                <p>
+                  Una vez autorizado, el indicador o estrategia
+                  deberá estar disponible dentro de tu cuenta.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="notice">
+            Si BTC PRO todavía no aparece después de recibir
+            confirmación de acceso, revisa que hayas iniciado
+            sesión con el mismo usuario de TradingView que enviaste.
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PASO 3
+      ========================== -->
+
+      <section
+        class="section"
+        id="paso-3"
+      >
+
+        <div class="section-top">
+
+          <div class="step-icon">
+            3
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              Añade BTC PRO al gráfico
+            </h2>
+
+            <p class="section-subtitle">
+              Antes de automatizar cualquier operación,
+              comprueba primero que la estrategia cargue correctamente.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="section-content">
+
+          <div class="checklist">
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Añade BTC PRO
+                </strong>
+
+                <p>
+                  Carga la estrategia en el gráfico y espera
+                  a que TradingView termine de calcular los datos.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Comprueba el mercado y temporalidad
+                </strong>
+
+                <p>
+                  No asumas que cualquier gráfico producirá
+                  los mismos resultados históricos.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Revisa las propiedades antes de operar
+                </strong>
+
+                <p>
+                  El tamaño de posición, capital y parámetros
+                  de riesgo deben ser revisados antes de conectar
+                  una cuenta real.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PASO 4
+      ========================== -->
+
+      <section
+        class="section"
+        id="paso-4"
+      >
+
+        <div class="section-top">
+
+          <div class="step-icon">
+            4
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              Configura tu capital y riesgo
+            </h2>
+
+            <p class="section-subtitle">
+              Esta parte debe adaptarse a la situación y tolerancia
+              al riesgo de cada usuario.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="section-content">
+
+          <div class="notice notice-danger">
+            <strong>Importante:</strong>
+            no copies automáticamente la configuración financiera
+            de otra persona. Un tamaño de posición adecuado para una
+            cuenta puede ser excesivo para otra.
+          </div>
+
+          <div class="parameter-table">
+
+            <table>
+
+              <thead>
+
+                <tr>
+                  <th>
+                    Parámetro
+                  </th>
+
+                  <th>
+                    Qué representa
+                  </th>
+
+                  <th>
+                    Acción
+                  </th>
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                    Capital
+                  </td>
+
+                  <td>
+                    Base utilizada para calcular el tamaño
+                    de las operaciones.
+                  </td>
+
+                  <td class="editable">
+                    Revisar
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                    Tamaño de orden
+                  </td>
+
+                  <td>
+                    Exposición utilizada en cada operación.
+                  </td>
+
+                  <td class="editable">
+                    Ajustar según riesgo
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                    Apalancamiento
+                  </td>
+
+                  <td>
+                    Multiplica exposición y también amplifica
+                    pérdidas potenciales.
+                  </td>
+
+                  <td class="editable">
+                    Revisar cuidadosamente
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                    Take Profit
+                  </td>
+
+                  <td>
+                    Objetivo de salida definido por la estrategia.
+                  </td>
+
+                  <td class="editable">
+                    Comprender antes de modificar
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+          <div class="notice">
+            BTC PRO no elimina el riesgo de mercado.
+            Operar futuros, utilizar apalancamiento o automatizar
+            órdenes puede producir pérdidas significativas.
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PASO 5
+      ========================== -->
+
+      <section
+        class="section"
+        id="paso-5"
+      >
+
+        <div class="section-top">
+
+          <div class="step-icon">
+            5
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              Conecta WunderTrading
+            </h2>
+
+            <p class="section-subtitle">
+              Esta conexión permite que las señales de TradingView
+              sean procesadas por tu automatización.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="section-content">
+
+          <div class="checklist">
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Conecta tu exchange
+                </strong>
+
+                <p>
+                  Verifica que la cuenta correcta esté conectada
+                  y que los permisos sean únicamente los necesarios
+                  para operar.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Configura tu Signal Bot
+                </strong>
+
+                <p>
+                  Selecciona el mercado correspondiente
+                  y revisa cuidadosamente tamaño de orden,
+                  apalancamiento y capital máximo.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Usa el webhook proporcionado
+                </strong>
+
+                <p>
+                  Copia el webhook y la plantilla JSON
+                  exactamente como corresponda a tu bot.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Crea la alerta en TradingView
+                </strong>
+
+                <p>
+                  Confirma que la alerta pertenece a BTC PRO
+                  y a la configuración que realmente vas a utilizar.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="notice notice-danger">
+            Nunca compartas contraseñas, claves privadas,
+            frases semilla ni credenciales completas de tu exchange.
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PASO 6
+      ========================== -->
+
+      <section
+        class="section"
+        id="paso-6"
+      >
+
+        <div class="section-top">
+
+          <div class="step-icon">
+            6
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              Verifica todo antes de dejarlo funcionando
+            </h2>
+
+            <p class="section-subtitle">
+              No des por terminada la instalación hasta comprobar
+              cada conexión.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="section-content">
+
+          <div class="checklist">
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  TradingView
+                </strong>
+
+                <p>
+                  BTC PRO aparece correctamente y no muestra
+                  errores de configuración.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Alerta
+                </strong>
+
+                <p>
+                  La alerta está activa y utiliza el webhook
+                  correcto.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  WunderTrading
+                </strong>
+
+                <p>
+                  El Signal Bot está activo y conectado
+                  a la cuenta deseada.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Riesgo
+                </strong>
+
+                <p>
+                  Revisaste capital, tamaño de posición,
+                  apalancamiento y límites antes de operar.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="notice notice-success">
+            Una configuración técnica correcta no garantiza
+            rentabilidad. Supervisa periódicamente tu cuenta,
+            conexiones y límites de riesgo.
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           SEGURIDAD
+      ========================== -->
+
+      <section class="section">
+
+        <div class="section-top">
+
+          <div class="step-icon">
+            !
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              Seguridad
+            </h2>
+
+            <p class="section-subtitle">
+              Protege tus cuentas y credenciales.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="section-content">
+
+          <div class="security-box">
+
+            <div class="security-item">
+
+              <strong>
+                Nunca compartas tu contraseña
+              </strong>
+
+              <p>
+                BTC PRO no necesita la contraseña
+                de tu cuenta de TradingView.
+              </p>
+
+            </div>
+
+            <div class="security-item">
+
+              <strong>
+                Nunca compartas tu seed phrase
+              </strong>
+
+              <p>
+                Ningún proceso legítimo de activación
+                necesita frases semilla.
+              </p>
+
+            </div>
+
+            <div class="security-item">
+
+              <strong>
+                Protege tus claves API
+              </strong>
+
+              <p>
+                Utiliza únicamente los permisos
+                estrictamente necesarios para operar.
+              </p>
+
+            </div>
+
+            <div class="security-item">
+
+              <strong>
+                Activa seguridad adicional
+              </strong>
+
+              <p>
+                Utiliza autenticación de dos factores
+                siempre que esté disponible.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           FINAL
+      ========================== -->
+
+      <section class="final-card">
+
+        <h2>
+          Configuración completada
+        </h2>
+
+        <p>
+          Si ya completaste los seis pasos, BTC PRO está preparado
+          para continuar con tus pruebas y operación bajo los
+          parámetros de riesgo que hayas definido.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            href="index.html"
+            class="button button-secondary"
+          >
+            Volver a BTC PRO
+          </a>
+
+          <a
+            href="#paso-1"
+            class="button button-primary"
+          >
+            Revisar desde el inicio
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="activar.html">
+          Activar
+        </a>
+
+        <a href="terminos.html">
+          Términos
+        </a>
+
+        <a href="privacidad.html">
+          Privacidad
+        </a>
+
+      </div>
+
+      <p>
+        BTC PRO es una herramienta de software.
+        El trading implica riesgo y puede ocasionar pérdidas.
+        Los resultados pasados no garantizan resultados futuros.
+      </p>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>

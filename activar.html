@@ -25,7 +25,7 @@
 
     .container {
       width: 100%;
-      max-width: 520px;
+      max-width: 560px;
     }
 
     .card {
@@ -64,6 +64,60 @@
       color: #aeb6c6;
       line-height: 1.55;
       font-size: 15px;
+    }
+
+    .setup-box {
+      background: #161b26;
+      border: 1px solid #2c3341;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .setup-box h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .setup-box p {
+      color: #cbd1dc;
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .steps {
+      color: #aeb6c6;
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 10px 0 18px 20px;
+    }
+
+    .tv-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid #d7a928;
+      border-radius: 9px;
+      padding: 14px;
+      color: #d7a928;
+      font-size: 15px;
+      font-weight: 700;
+      background: transparent;
+      transition: 0.2s ease;
+    }
+
+    .tv-button:hover {
+      background: rgba(215, 169, 40, 0.08);
+    }
+
+    .already {
+      margin-top: 16px;
+      color: #8f99aa;
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.5;
     }
 
     .notice {
@@ -105,6 +159,13 @@
 
     input::placeholder {
       color: #697386;
+    }
+
+    .field-help {
+      margin-top: 7px;
+      color: #747e90;
+      font-size: 12px;
+      line-height: 1.45;
     }
 
     button {
@@ -197,14 +258,48 @@
         </p>
       </div>
 
+      <div class="setup-box">
+
+        <h2>¿Aún no tienes una cuenta de TradingView?</h2>
+
+        <p>
+          BTC PRO funciona dentro de TradingView.
+          Para recibir acceso necesitas una cuenta de TradingView.
+        </p>
+
+        <ol class="steps">
+          <li>Abre TradingView con el botón de abajo.</li>
+          <li>Crea una cuenta gratuita.</li>
+          <li>Elige tu nombre de usuario de TradingView.</li>
+          <li>Regresa a esta página.</li>
+          <li>Completa el formulario de activación.</li>
+        </ol>
+
+        <a
+          href="https://www.tradingview.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="tv-button"
+        >
+          Crear cuenta gratuita en TradingView ↗
+        </a>
+
+        <p class="already">
+          ¿Ya tienes cuenta de TradingView?
+          Continúa directamente con el formulario de abajo.
+        </p>
+
+      </div>
+
       <div class="notice">
         Utiliza exactamente el mismo correo electrónico
-        que utilizaste al realizar tu suscripción.
+        que utilizaste al realizar tu suscripción a BTC PRO.
       </div>
 
       <form id="activationForm">
 
         <div class="field">
+
           <label for="email">
             Correo utilizado en el pago
           </label>
@@ -218,23 +313,36 @@
             maxlength="254"
             required
           >
+
+          <p class="field-help">
+            Debe ser exactamente el mismo correo utilizado
+            durante el pago en Stripe.
+          </p>
+
         </div>
 
         <div class="field">
+
           <label for="tradingview">
-            Usuario de TradingView
+            Nombre de usuario de TradingView
           </label>
 
           <input
             type="text"
             id="tradingview"
             name="tradingview"
-            placeholder="Tu usuario de TradingView"
+            placeholder="Ejemplo: btcproalgo"
             autocomplete="off"
             minlength="2"
             maxlength="100"
             required
           >
+
+          <p class="field-help">
+            Escribe tu nombre de usuario de TradingView,
+            no tu correo electrónico ni tu contraseña.
+          </p>
+
         </div>
 
         <button
@@ -253,14 +361,14 @@
       </form>
 
       <p class="help">
-        Tu suscripción será verificada antes de
-        registrar la solicitud de acceso.
+        Tu suscripción será verificada automáticamente antes
+        de registrar la solicitud de acceso.
       </p>
 
       <div class="security">
         BTC PRO nunca te solicitará contraseñas,
-        claves API, frases semilla ni credenciales
-        de acceso a TradingView.
+        claves API, frases semilla, claves privadas
+        ni credenciales de acceso a TradingView.
       </div>
 
     </section>
@@ -307,9 +415,11 @@
       }
 
       button.disabled = true;
-      button.textContent = "Verificando suscripción...";
+      button.textContent =
+        "Verificando suscripción...";
 
       try {
+
         const response = await fetch(
           ACTIVATION_ENDPOINT,
           {
@@ -350,10 +460,12 @@
         form.reset();
 
         setTimeout(() => {
-          window.location.href = "bienvenido.html";
+          window.location.href =
+            "bienvenido.html";
         }, 1500);
 
       } catch (error) {
+
         console.error(
           "Error de activación:",
           error
@@ -366,7 +478,9 @@
         );
 
       } finally {
+
         button.disabled = false;
+
         button.textContent =
           "Solicitar activación";
       }

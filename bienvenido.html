@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Guía de configuración y activación de BTC PRO."
+    content="Guía oficial de configuración de BTC PRO."
   >
 
   <style>
@@ -238,17 +238,14 @@
 
     .progress-steps {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(7, 1fr);
       gap: 10px;
-
       margin-top: 22px;
     }
 
     .progress-step {
       min-height: 76px;
-
       padding: 12px;
-
       background: #0b0e15;
       border: 1px solid #252b38;
       border-radius: 10px;
@@ -409,7 +406,7 @@
     }
 
     /* =========================
-       PARAMETER TABLE
+       TABLE
     ========================= */
 
     .parameter-table {
@@ -454,6 +451,37 @@
     }
 
     /* =========================
+       VIDEO PLACEHOLDER
+    ========================= */
+
+    .video-box {
+      margin-top: 22px;
+      padding: 26px;
+      text-align: center;
+      background: #111620;
+      border: 1px dashed #3c4555;
+      border-radius: 12px;
+    }
+
+    .video-label {
+      color: #e2b938;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .video-box h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .video-box p {
+      color: #8f99aa;
+      font-size: 14px;
+    }
+
+    /* =========================
        SECURITY
     ========================= */
 
@@ -482,7 +510,7 @@
     }
 
     /* =========================
-       FINAL CARD
+       FINAL
     ========================= */
 
     .final-card {
@@ -510,7 +538,6 @@
     .final-card p {
       max-width: 650px;
       margin: 0 auto;
-
       color: #aeb6c6;
     }
 
@@ -545,7 +572,7 @@
        RESPONSIVE
     ========================= */
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       .progress-steps {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -612,1101 +639,1372 @@
 
 <body>
 
-  <div class="page">
+<div class="page">
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+  <!-- HEADER -->
 
-    <header class="header">
+  <header class="header">
 
-      <div class="header-inner">
+    <div class="header-inner">
 
-        <a
-          href="index.html"
-          class="brand"
-        >
-          <div class="brand-logo">
-            BTC
-          </div>
+      <a href="index.html" class="brand">
 
-          <div class="brand-name">
-            BTC PRO
-          </div>
+        <div class="brand-logo">
+          BTC
+        </div>
+
+        <div class="brand-name">
+          BTC PRO
+        </div>
+
+      </a>
+
+      <a
+        href="activar.html"
+        class="header-button"
+      >
+        Solicitar acceso
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-badge">
+      ✓ Guía oficial de configuración
+    </div>
+
+    <h1>
+      Configura
+      <span class="gold">BTC PRO</span>
+      paso a paso
+    </h1>
+
+    <p class="hero-text">
+      Completa esta guía en orden para preparar
+      TradingView, BTC PRO, Binance Futures,
+      WunderTrading y tu automatización.
+    </p>
+
+    <div class="hero-actions">
+
+      <a
+        href="#paso-1"
+        class="button button-primary"
+      >
+        Comenzar configuración
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROGRESS -->
+
+  <section class="progress-section">
+
+    <div class="progress-card">
+
+      <h2>
+        Tu ruta de instalación
+      </h2>
+
+      <p>
+        Completa cada paso antes de continuar al siguiente.
+      </p>
+
+      <div class="progress-steps">
+
+        <a href="#paso-1" class="progress-step">
+          <span class="progress-number">PASO 01</span>
+          <span class="progress-name">Acceso</span>
         </a>
 
-        <a
-          href="activar.html"
-          class="header-button"
-        >
-          Solicitar acceso
+        <a href="#paso-2" class="progress-step">
+          <span class="progress-number">PASO 02</span>
+          <span class="progress-name">TradingView</span>
+        </a>
+
+        <a href="#paso-3" class="progress-step">
+          <span class="progress-number">PASO 03</span>
+          <span class="progress-name">BTC PRO</span>
+        </a>
+
+        <a href="#paso-4" class="progress-step">
+          <span class="progress-number">PASO 04</span>
+          <span class="progress-name">Capital</span>
+        </a>
+
+        <a href="#paso-5" class="progress-step">
+          <span class="progress-number">PASO 05</span>
+          <span class="progress-name">Binance</span>
+        </a>
+
+        <a href="#paso-6" class="progress-step">
+          <span class="progress-number">PASO 06</span>
+          <span class="progress-name">Wunder</span>
+        </a>
+
+        <a href="#paso-7" class="progress-step">
+          <span class="progress-number">PASO 07</span>
+          <span class="progress-name">Verificar</span>
         </a>
 
       </div>
 
-    </header>
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+  <!-- MAIN -->
 
-    <section class="hero">
+  <main class="main">
 
-      <div class="hero-badge">
-        ✓ Guía oficial de configuración
+
+    <!-- PASO 1 -->
+
+    <section class="section" id="paso-1">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          1
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Solicita tu acceso
+          </h2>
+
+          <p class="section-subtitle">
+            Tu suscripción debe estar activa antes
+            de continuar con la instalación.
+          </p>
+
+        </div>
+
       </div>
 
-      <h1>
-        Bienvenido a
-        <span class="gold">BTC PRO</span>
-      </h1>
+      <div class="section-content">
 
-      <p class="hero-text">
-        Sigue esta guía en orden para solicitar tu acceso,
-        configurar BTC PRO y preparar correctamente tu
-        entorno de TradingView y automatización.
+        <div class="checklist">
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Utiliza el correo de tu compra
+              </strong>
+
+              <p>
+                Debe coincidir exactamente con el correo
+                utilizado durante el pago.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Registra tu usuario de TradingView
+              </strong>
+
+              <p>
+                Escribe tu nombre de usuario,
+                no tu contraseña.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="section-actions">
+
+          <a
+            href="activar.html"
+            class="button button-primary"
+          >
+            Abrir página de activación
+          </a>
+
+        </div>
+
+        <div class="notice">
+          Si ya enviaste tu solicitud de acceso,
+          no necesitas volver a enviarla.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PASO 2 -->
+
+    <section class="section" id="paso-2">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          2
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Prepara TradingView
+          </h2>
+
+          <p class="section-subtitle">
+            Comprueba que tu cuenta ya tenga acceso a BTC PRO ST V3.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="section-content">
+
+        <div class="checklist">
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Abre TradingView
+              </strong>
+
+              <p>
+                Inicia sesión con el usuario que registraste
+                durante la activación.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Abre BTCUSDT
+              </strong>
+
+              <p>
+                Utiliza el gráfico de Bitcoin contra USDT.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Temporalidad
+              </strong>
+
+              <p>
+                BTC PRO ST V3 está diseñado para utilizarse
+                en temporalidad de <strong>30 minutos</strong>.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Añade BTC PRO ST V3
+              </strong>
+
+              <p>
+                Busca el script dentro de tus
+                scripts con acceso por invitación.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="video-box">
+
+          <div class="video-label">
+            VIDEO TUTORIAL
+          </div>
+
+          <h3>
+            Cómo abrir BTC PRO en TradingView
+          </h3>
+
+          <p>
+            Aquí se añadirá el video mostrando
+            exactamente dónde encontrar el script.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PASO 3 -->
+
+    <section class="section" id="paso-3">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          3
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Configura BTC PRO
+          </h2>
+
+          <p class="section-subtitle">
+            Revisa los parámetros principales antes
+            de conectar una cuenta real.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="section-content">
+
+        <div class="checklist">
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                ATR Length
+              </strong>
+
+              <p>
+                Utiliza la configuración oficial indicada
+                en BTC PRO.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Factor
+              </strong>
+
+              <p>
+                Mantén el valor oficial de la estrategia
+                salvo indicación expresa del tutorial.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Take Profit %
+              </strong>
+
+              <p>
+                BTC PRO utiliza un Take Profit de
+                <strong>0.66%</strong>.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                LIVE - Take Profit objetivo
+              </strong>
+
+              <p>
+                Este valor depende de tu capital y del riesgo
+                que tú decidas asumir.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="notice">
+          No confundas el Take Profit porcentual de 0.66%
+          con tu objetivo monetario en USDT.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PASO 4 -->
+
+    <section class="section" id="paso-4">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          4
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Configura tu capital y tu objetivo de Take Profit
+          </h2>
+
+          <p class="section-subtitle">
+            Cada usuario debe elegir su propio nivel de riesgo.
+            Esta sección explica la referencia utilizada para BTC PRO.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="section-content">
+
+        <div class="notice notice-danger">
+          <strong>Importante:</strong>
+          no copies automáticamente la configuración
+          de capital de otra persona.
+        </div>
+
+        <div
+          style="
+            margin-top:20px;
+            padding:22px;
+            background:#0b0e15;
+            border:1px solid #343b49;
+            border-radius:12px;
+          "
+        >
+
+          <h3
+            style="
+              margin-bottom:10px;
+              font-size:20px;
+            "
+          >
+            Referencia de capital utilizada en BTC PRO
+          </h3>
+
+          <p
+            style="
+              color:#aeb6c6;
+              font-size:14px;
+              line-height:1.7;
+            "
+          >
+            Como referencia de configuración,
+            puedes utilizar una relación aproximada de
+            <strong style="color:#e2b938;">
+              10 a 1
+            </strong>
+            entre tu capital disponible y tu objetivo
+            de Take Profit.
+          </p>
+
+          <p
+            style="
+              margin-top:12px;
+              color:#ffffff;
+              font-size:16px;
+              line-height:1.7;
+            "
+          >
+            Ejemplo:
+            si quieres configurar un objetivo de
+            <strong style="color:#e2b938;">
+              100 USDT
+            </strong>
+            por Take Profit, la referencia sería
+            utilizar aproximadamente
+            <strong style="color:#e2b938;">
+              1,000 USDT de capital
+            </strong>.
+          </p>
+
+        </div>
+
+        <div class="parameter-table">
+
+          <table>
+
+            <thead>
+
+              <tr>
+                <th>Capital de referencia</th>
+                <th>Objetivo TP de referencia</th>
+                <th>Relación</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>1,000 USDT</td>
+                <td class="editable">100 USDT</td>
+                <td>10 : 1</td>
+              </tr>
+
+              <tr>
+                <td>2,000 USDT</td>
+                <td class="editable">200 USDT</td>
+                <td>10 : 1</td>
+              </tr>
+
+              <tr>
+                <td>3,000 USDT</td>
+                <td class="editable">300 USDT</td>
+                <td>10 : 1</td>
+              </tr>
+
+              <tr>
+                <td>5,000 USDT</td>
+                <td class="editable">500 USDT</td>
+                <td>10 : 1</td>
+              </tr>
+
+              <tr>
+                <td>10,000 USDT</td>
+                <td class="editable">1,000 USDT</td>
+                <td>10 : 1</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <div
+          style="
+            margin-top:22px;
+            padding:22px;
+            background:#0b0e15;
+            border:1px solid #252b38;
+            border-radius:12px;
+          "
+        >
+
+          <h3
+            style="
+              margin-bottom:14px;
+              font-size:19px;
+            "
+          >
+            ¿Qué debes cambiar dentro de BTC PRO?
+          </h3>
+
+          <div class="checklist">
+
+            <div class="check-item">
+
+              <div class="check">✓</div>
+
+              <div>
+
+                <strong>
+                  Take Profit %
+                </strong>
+
+                <p>
+                  Mantén el Take Profit porcentual
+                  de la estrategia en
+                  <strong>0.66%</strong>.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">✓</div>
+
+              <div>
+
+                <strong>
+                  LIVE - Take Profit objetivo (USDT)
+                </strong>
+
+                <p>
+                  Aquí escribes el objetivo monetario
+                  elegido según tu capital y riesgo.
+                </p>
+
+                <p
+                  style="
+                    margin-top:8px;
+                    color:#e2b938;
+                    font-weight:700;
+                  "
+                >
+                  Ejemplo: capital 1,000 USDT →
+                  objetivo 100 USDT.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="check-item">
+
+              <div class="check">✓</div>
+
+              <div>
+
+                <strong>
+                  Paso de cantidad BTC
+                </strong>
+
+                <p>
+                  Mantén el paso indicado en la
+                  configuración oficial de BTC PRO
+                  salvo que el tutorial indique lo contrario.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div
+          style="
+            margin-top:22px;
+            padding:22px;
+            background:#0b0e15;
+            border:1px solid #252b38;
+            border-radius:12px;
+          "
+        >
+
+          <h3
+            style="
+              margin-bottom:12px;
+              font-size:19px;
+            "
+          >
+            También debes revisar WunderTrading
+          </h3>
+
+          <p
+            style="
+              color:#aeb6c6;
+              font-size:14px;
+              line-height:1.7;
+            "
+          >
+            Si aumentas tu objetivo de Take Profit,
+            BTC PRO puede necesitar enviar una posición
+            de mayor valor.
+          </p>
+
+          <p
+            style="
+              margin-top:10px;
+              color:#aeb6c6;
+              font-size:14px;
+              line-height:1.7;
+            "
+          >
+            El campo
+            <strong style="color:#ffffff;">
+              Max Capital
+            </strong>
+            de WunderTrading debe ser suficiente
+            para permitir la orden configurada.
+          </p>
+
+          <p
+            style="
+              margin-top:10px;
+              color:#aeb6c6;
+              font-size:14px;
+              line-height:1.7;
+            "
+          >
+            No copies el Max Capital de otra persona.
+            Debe configurarse de acuerdo con tu propio
+            objetivo y tu propia cuenta.
+          </p>
+
+        </div>
+
+        <div class="video-box">
+
+          <div class="video-label">
+            VIDEO TUTORIAL
+          </div>
+
+          <h3>
+            Cómo elegir tu capital y configurar tu objetivo
+          </h3>
+
+          <p>
+            Aquí se añadirá el video mostrando exactamente
+            dónde cambiar estos parámetros.
+          </p>
+
+        </div>
+
+        <div class="notice">
+          La relación 10:1 es una referencia
+          de configuración utilizada para explicar
+          el funcionamiento de BTC PRO.
+          No representa una garantía de beneficios.
+        </div>
+
+        <div class="notice notice-danger">
+          Operar futuros y utilizar apalancamiento
+          implica riesgo de pérdidas significativas.
+          Elige únicamente un nivel de exposición
+          que estés dispuesto a asumir.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PASO 5 -->
+
+    <section class="section" id="paso-5">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          5
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Prepara Binance Futures
+          </h2>
+
+          <p class="section-subtitle">
+            Configura correctamente el entorno donde
+            se ejecutarán las operaciones.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="section-content">
+
+        <div class="checklist">
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Abre Binance Futures USDⓈ-M
+              </strong>
+
+              <p>
+                Utiliza BTCUSDT Futures para la configuración
+                de BTC PRO.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Revisa el modo de margen
+              </strong>
+
+              <p>
+                Utiliza únicamente la configuración indicada
+                en el tutorial oficial antes de operar.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Verifica tu saldo disponible
+              </strong>
+
+              <p>
+                No configures un objetivo que exceda
+                el nivel de riesgo que quieres asumir.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="video-box">
+
+          <div class="video-label">
+            VIDEO TUTORIAL
+          </div>
+
+          <h3>
+            Configuración de Binance Futures
+          </h3>
+
+          <p>
+            Aquí añadiremos el video completo
+            de configuración de Binance.
+          </p>
+
+        </div>
+
+        <div class="notice notice-danger">
+          Binance Futures utiliza productos apalancados.
+          Una configuración incorrecta puede aumentar
+          significativamente el riesgo de pérdida.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PASO 6 -->
+
+    <section class="section" id="paso-6">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          6
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Conecta WunderTrading
+          </h2>
+
+          <p class="section-subtitle">
+            WunderTrading recibe las señales de TradingView
+            y las conecta con tu exchange.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="section-content">
+
+        <div class="checklist">
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Conecta tu cuenta de Binance
+              </strong>
+
+              <p>
+                Utiliza únicamente los permisos necesarios.
+                Nunca compartas tus claves API con otras personas.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Crea un TradingView Strategy Bot
+              </strong>
+
+              <p>
+                Configura BTCUSDT y temporalidad
+                de 30 minutos.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Order Placement
+              </strong>
+
+              <p>
+                Utiliza la configuración indicada
+                en el tutorial oficial del Signal Bot.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Max Capital
+              </strong>
+
+              <p>
+                Debe ser suficiente para permitir
+                la orden que BTC PRO intenta enviar.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Copia el Webhook URL
+              </strong>
+
+              <p>
+                WunderTrading te proporcionará
+                el webhook que utilizarás en TradingView.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="check-item">
+
+            <div class="check">✓</div>
+
+            <div>
+
+              <strong>
+                Copia el mensaje JSON
+              </strong>
+
+              <p>
+                Utiliza exactamente el mensaje correspondiente
+                a tu Signal Bot.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="video-box">
+
+          <div class="video-label">
+            VIDEO TUTORIAL
+          </div>
+
+          <h3>
+            Crear el Signal Bot en WunderTrading
+          </h3>
+
+          <p>
+            Aquí añadiremos el tutorial completo
+            desde la conexión de Binance hasta
+            la creación del webhook.
+          </p>
+
+        </div>
+
+        <div class="notice">
+          No copies webhooks ni configuraciones
+          pertenecientes a otro usuario.
+          Cada cliente debe usar su propia cuenta
+          de WunderTrading y sus propias conexiones.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PASO 7 -->
+
+    <section class="section" id="paso-7">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          7
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Crea la alerta y verifica todo
+          </h2>
+
+          <p class="section-subtitle">
+            Antes de dejar BTC PRO funcionando,
+            revisa toda la instalación.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="section-content">
+
+        <div class="checklist">
+
+          <div class="check-item">
+            <div class="check">✓</div>
+
+            <div>
+              <strong>BTCUSDT está en 30 minutos</strong>
+              <p>Verifica el gráfico antes de crear la alerta.</p>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check">✓</div>
+
+            <div>
+              <strong>BTC PRO ST V3 está activo</strong>
+              <p>La estrategia debe aparecer correctamente en el gráfico.</p>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check">✓</div>
+
+            <div>
+              <strong>Webhook correcto</strong>
+              <p>Utiliza el webhook proporcionado por tu propio Signal Bot.</p>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check">✓</div>
+
+            <div>
+              <strong>Mensaje correcto</strong>
+              <p>
+                Usa exactamente el mensaje JSON
+                indicado en el tutorial.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check">✓</div>
+
+            <div>
+              <strong>WunderTrading está activo</strong>
+              <p>Confirma que tu Signal Bot está encendido.</p>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check">✓</div>
+
+            <div>
+              <strong>Capital y riesgo revisados</strong>
+              <p>
+                Verifica tu objetivo de TP y Max Capital
+                antes de permitir operaciones reales.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="video-box">
+
+          <div class="video-label">
+            VIDEO TUTORIAL
+          </div>
+
+          <h3>
+            Crear la alerta final en TradingView
+          </h3>
+
+          <p>
+            Aquí añadiremos el tutorial mostrando
+            webhook, mensaje y condición de la alerta.
+          </p>
+
+        </div>
+
+        <div class="notice notice-success">
+          Si completaste todos los pasos,
+          BTC PRO está preparado para comenzar
+          a recibir señales.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SEGURIDAD -->
+
+    <section class="section">
+
+      <div class="section-top">
+
+        <div class="step-icon">
+          !
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Seguridad
+          </h2>
+
+          <p class="section-subtitle">
+            Protege tus cuentas y credenciales.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="section-content">
+
+        <div class="security-box">
+
+          <div class="security-item">
+
+            <strong>
+              Nunca compartas tu contraseña
+            </strong>
+
+            <p>
+              BTC PRO no necesita la contraseña
+              de TradingView, Binance o WunderTrading.
+            </p>
+
+          </div>
+
+          <div class="security-item">
+
+            <strong>
+              Nunca compartas tu seed phrase
+            </strong>
+
+            <p>
+              Ningún proceso legítimo de BTC PRO
+              necesita frases semilla.
+            </p>
+
+          </div>
+
+          <div class="security-item">
+
+            <strong>
+              Protege tus claves API
+            </strong>
+
+            <p>
+              Utiliza únicamente los permisos estrictamente
+              necesarios para operar.
+            </p>
+
+          </div>
+
+          <div class="security-item">
+
+            <strong>
+              Activa 2FA
+            </strong>
+
+            <p>
+              Utiliza autenticación de dos factores
+              siempre que esté disponible.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final-card">
+
+      <h2>
+        Configuración completada
+      </h2>
+
+      <p>
+        Si completaste todos los pasos,
+        BTC PRO está preparado para continuar
+        con tu configuración y operación
+        bajo el nivel de riesgo que tú hayas elegido.
       </p>
 
       <div class="hero-actions">
 
         <a
-          href="#paso-1"
-          class="button button-primary"
+          href="index.html"
+          class="button button-secondary"
         >
-          Comenzar configuración
+          Volver a BTC PRO
         </a>
 
         <a
-          href="activar.html"
-          class="button button-secondary"
+          href="#paso-1"
+          class="button button-primary"
         >
-          Solicitar acceso
+          Revisar desde el inicio
         </a>
 
       </div>
 
     </section>
 
+  </main>
 
-    <!-- =========================
-         PROGRESS
-    ========================== -->
 
-    <section class="progress-section">
+  <!-- FOOTER -->
 
-      <div class="progress-card">
+  <footer class="footer">
 
-        <h2>
-          Tu ruta de configuración
-        </h2>
+    <div class="footer-links">
 
-        <p>
-          Completa los pasos en este orden.
-        </p>
+      <a href="index.html">
+        Inicio
+      </a>
 
-        <div class="progress-steps">
+      <a href="activar.html">
+        Activar
+      </a>
 
-          <a
-            href="#paso-1"
-            class="progress-step"
-          >
-            <span class="progress-number">
-              PASO 01
-            </span>
+      <a href="terminos.html">
+        Términos
+      </a>
 
-            <span class="progress-name">
-              Acceso
-            </span>
-          </a>
+      <a href="privacidad.html">
+        Privacidad
+      </a>
 
-          <a
-            href="#paso-2"
-            class="progress-step"
-          >
-            <span class="progress-number">
-              PASO 02
-            </span>
+    </div>
 
-            <span class="progress-name">
-              TradingView
-            </span>
-          </a>
+    <p>
+      BTC PRO es una herramienta de software.
+      El trading implica riesgo y puede ocasionar pérdidas.
+      Los resultados pasados no garantizan resultados futuros.
+    </p>
 
-          <a
-            href="#paso-3"
-            class="progress-step"
-          >
-            <span class="progress-number">
-              PASO 03
-            </span>
+  </footer>
 
-            <span class="progress-name">
-              BTC PRO
-            </span>
-          </a>
-
-          <a
-            href="#paso-4"
-            class="progress-step"
-          >
-            <span class="progress-number">
-              PASO 04
-            </span>
-
-            <span class="progress-name">
-              Riesgo
-            </span>
-          </a>
-
-          <a
-            href="#paso-5"
-            class="progress-step"
-          >
-            <span class="progress-number">
-              PASO 05
-            </span>
-
-            <span class="progress-name">
-              WunderTrading
-            </span>
-          </a>
-
-          <a
-            href="#paso-6"
-            class="progress-step"
-          >
-            <span class="progress-number">
-              PASO 06
-            </span>
-
-            <span class="progress-name">
-              Verificación
-            </span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         MAIN
-    ========================== -->
-
-    <main class="main">
-
-
-      <!-- =========================
-           PASO 1
-      ========================== -->
-
-      <section
-        class="section"
-        id="paso-1"
-      >
-
-        <div class="section-top">
-
-          <div class="step-icon">
-            1
-          </div>
-
-          <div>
-
-            <h2 class="section-title">
-              Solicita tu acceso a BTC PRO
-            </h2>
-
-            <p class="section-subtitle">
-              Este es el primer paso después de completar tu compra.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="section-content">
-
-          <div class="checklist">
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Utiliza el correo de tu compra
-                </strong>
-
-                <p>
-                  Debe ser exactamente el mismo correo
-                  utilizado durante el proceso de pago.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Escribe tu usuario exacto de TradingView
-                </strong>
-
-                <p>
-                  Revisa mayúsculas, minúsculas y caracteres
-                  antes de enviar la solicitud.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Envía una sola solicitud
-                </strong>
-
-                <p>
-                  Si tu suscripción está activa, el sistema
-                  registrará tu usuario para la activación.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="section-actions">
-
-            <a
-              href="activar.html"
-              class="button button-primary"
-            >
-              Abrir página de activación
-            </a>
-
-          </div>
-
-          <div class="notice">
-            El acceso a TradingView puede requerir una
-            validación manual. No realices una segunda compra
-            si todavía estás esperando activación.
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PASO 2
-      ========================== -->
-
-      <section
-        class="section"
-        id="paso-2"
-      >
-
-        <div class="section-top">
-
-          <div class="step-icon">
-            2
-          </div>
-
-          <div>
-
-            <h2 class="section-title">
-              Comprueba tu acceso en TradingView
-            </h2>
-
-            <p class="section-subtitle">
-              Continúa únicamente después de que tu usuario
-              haya sido autorizado.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="section-content">
-
-          <div class="checklist">
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Inicia sesión en TradingView
-                </strong>
-
-                <p>
-                  Utiliza la misma cuenta cuyo nombre de usuario
-                  enviaste durante la activación.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Abre el gráfico que utilizarás
-                </strong>
-
-                <p>
-                  Verifica que estés utilizando el mercado,
-                  símbolo y temporalidad correspondientes
-                  a tu configuración.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Busca BTC PRO en tus scripts con acceso
-                </strong>
-
-                <p>
-                  Una vez autorizado, el indicador o estrategia
-                  deberá estar disponible dentro de tu cuenta.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="notice">
-            Si BTC PRO todavía no aparece después de recibir
-            confirmación de acceso, revisa que hayas iniciado
-            sesión con el mismo usuario de TradingView que enviaste.
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PASO 3
-      ========================== -->
-
-      <section
-        class="section"
-        id="paso-3"
-      >
-
-        <div class="section-top">
-
-          <div class="step-icon">
-            3
-          </div>
-
-          <div>
-
-            <h2 class="section-title">
-              Añade BTC PRO al gráfico
-            </h2>
-
-            <p class="section-subtitle">
-              Antes de automatizar cualquier operación,
-              comprueba primero que la estrategia cargue correctamente.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="section-content">
-
-          <div class="checklist">
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Añade BTC PRO
-                </strong>
-
-                <p>
-                  Carga la estrategia en el gráfico y espera
-                  a que TradingView termine de calcular los datos.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Comprueba el mercado y temporalidad
-                </strong>
-
-                <p>
-                  No asumas que cualquier gráfico producirá
-                  los mismos resultados históricos.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Revisa las propiedades antes de operar
-                </strong>
-
-                <p>
-                  El tamaño de posición, capital y parámetros
-                  de riesgo deben ser revisados antes de conectar
-                  una cuenta real.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PASO 4
-      ========================== -->
-
-      <section
-        class="section"
-        id="paso-4"
-      >
-
-        <div class="section-top">
-
-          <div class="step-icon">
-            4
-          </div>
-
-          <div>
-
-            <h2 class="section-title">
-              Configura tu capital y riesgo
-            </h2>
-
-            <p class="section-subtitle">
-              Esta parte debe adaptarse a la situación y tolerancia
-              al riesgo de cada usuario.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="section-content">
-
-          <div class="notice notice-danger">
-            <strong>Importante:</strong>
-            no copies automáticamente la configuración financiera
-            de otra persona. Un tamaño de posición adecuado para una
-            cuenta puede ser excesivo para otra.
-          </div>
-
-          <div class="parameter-table">
-
-            <table>
-
-              <thead>
-
-                <tr>
-                  <th>
-                    Parámetro
-                  </th>
-
-                  <th>
-                    Qué representa
-                  </th>
-
-                  <th>
-                    Acción
-                  </th>
-                </tr>
-
-              </thead>
-
-              <tbody>
-
-                <tr>
-
-                  <td>
-                    Capital
-                  </td>
-
-                  <td>
-                    Base utilizada para calcular el tamaño
-                    de las operaciones.
-                  </td>
-
-                  <td class="editable">
-                    Revisar
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>
-                    Tamaño de orden
-                  </td>
-
-                  <td>
-                    Exposición utilizada en cada operación.
-                  </td>
-
-                  <td class="editable">
-                    Ajustar según riesgo
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>
-                    Apalancamiento
-                  </td>
-
-                  <td>
-                    Multiplica exposición y también amplifica
-                    pérdidas potenciales.
-                  </td>
-
-                  <td class="editable">
-                    Revisar cuidadosamente
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>
-                    Take Profit
-                  </td>
-
-                  <td>
-                    Objetivo de salida definido por la estrategia.
-                  </td>
-
-                  <td class="editable">
-                    Comprender antes de modificar
-                  </td>
-
-                </tr>
-
-              </tbody>
-
-            </table>
-
-          </div>
-
-          <div class="notice">
-            BTC PRO no elimina el riesgo de mercado.
-            Operar futuros, utilizar apalancamiento o automatizar
-            órdenes puede producir pérdidas significativas.
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PASO 5
-      ========================== -->
-
-      <section
-        class="section"
-        id="paso-5"
-      >
-
-        <div class="section-top">
-
-          <div class="step-icon">
-            5
-          </div>
-
-          <div>
-
-            <h2 class="section-title">
-              Conecta WunderTrading
-            </h2>
-
-            <p class="section-subtitle">
-              Esta conexión permite que las señales de TradingView
-              sean procesadas por tu automatización.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="section-content">
-
-          <div class="checklist">
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Conecta tu exchange
-                </strong>
-
-                <p>
-                  Verifica que la cuenta correcta esté conectada
-                  y que los permisos sean únicamente los necesarios
-                  para operar.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Configura tu Signal Bot
-                </strong>
-
-                <p>
-                  Selecciona el mercado correspondiente
-                  y revisa cuidadosamente tamaño de orden,
-                  apalancamiento y capital máximo.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Usa el webhook proporcionado
-                </strong>
-
-                <p>
-                  Copia el webhook y la plantilla JSON
-                  exactamente como corresponda a tu bot.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Crea la alerta en TradingView
-                </strong>
-
-                <p>
-                  Confirma que la alerta pertenece a BTC PRO
-                  y a la configuración que realmente vas a utilizar.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="notice notice-danger">
-            Nunca compartas contraseñas, claves privadas,
-            frases semilla ni credenciales completas de tu exchange.
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PASO 6
-      ========================== -->
-
-      <section
-        class="section"
-        id="paso-6"
-      >
-
-        <div class="section-top">
-
-          <div class="step-icon">
-            6
-          </div>
-
-          <div>
-
-            <h2 class="section-title">
-              Verifica todo antes de dejarlo funcionando
-            </h2>
-
-            <p class="section-subtitle">
-              No des por terminada la instalación hasta comprobar
-              cada conexión.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="section-content">
-
-          <div class="checklist">
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  TradingView
-                </strong>
-
-                <p>
-                  BTC PRO aparece correctamente y no muestra
-                  errores de configuración.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Alerta
-                </strong>
-
-                <p>
-                  La alerta está activa y utiliza el webhook
-                  correcto.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  WunderTrading
-                </strong>
-
-                <p>
-                  El Signal Bot está activo y conectado
-                  a la cuenta deseada.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="check-item">
-
-              <div class="check">
-                ✓
-              </div>
-
-              <div>
-
-                <strong>
-                  Riesgo
-                </strong>
-
-                <p>
-                  Revisaste capital, tamaño de posición,
-                  apalancamiento y límites antes de operar.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="notice notice-success">
-            Una configuración técnica correcta no garantiza
-            rentabilidad. Supervisa periódicamente tu cuenta,
-            conexiones y límites de riesgo.
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           SEGURIDAD
-      ========================== -->
-
-      <section class="section">
-
-        <div class="section-top">
-
-          <div class="step-icon">
-            !
-          </div>
-
-          <div>
-
-            <h2 class="section-title">
-              Seguridad
-            </h2>
-
-            <p class="section-subtitle">
-              Protege tus cuentas y credenciales.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="section-content">
-
-          <div class="security-box">
-
-            <div class="security-item">
-
-              <strong>
-                Nunca compartas tu contraseña
-              </strong>
-
-              <p>
-                BTC PRO no necesita la contraseña
-                de tu cuenta de TradingView.
-              </p>
-
-            </div>
-
-            <div class="security-item">
-
-              <strong>
-                Nunca compartas tu seed phrase
-              </strong>
-
-              <p>
-                Ningún proceso legítimo de activación
-                necesita frases semilla.
-              </p>
-
-            </div>
-
-            <div class="security-item">
-
-              <strong>
-                Protege tus claves API
-              </strong>
-
-              <p>
-                Utiliza únicamente los permisos
-                estrictamente necesarios para operar.
-              </p>
-
-            </div>
-
-            <div class="security-item">
-
-              <strong>
-                Activa seguridad adicional
-              </strong>
-
-              <p>
-                Utiliza autenticación de dos factores
-                siempre que esté disponible.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           FINAL
-      ========================== -->
-
-      <section class="final-card">
-
-        <h2>
-          Configuración completada
-        </h2>
-
-        <p>
-          Si ya completaste los seis pasos, BTC PRO está preparado
-          para continuar con tus pruebas y operación bajo los
-          parámetros de riesgo que hayas definido.
-        </p>
-
-        <div class="hero-actions">
-
-          <a
-            href="index.html"
-            class="button button-secondary"
-          >
-            Volver a BTC PRO
-          </a>
-
-          <a
-            href="#paso-1"
-            class="button button-primary"
-          >
-            Revisar desde el inicio
-          </a>
-
-        </div>
-
-      </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer">
-
-      <div class="footer-links">
-
-        <a href="index.html">
-          Inicio
-        </a>
-
-        <a href="activar.html">
-          Activar
-        </a>
-
-        <a href="terminos.html">
-          Términos
-        </a>
-
-        <a href="privacidad.html">
-          Privacidad
-        </a>
-
-      </div>
-
-      <p>
-        BTC PRO es una herramienta de software.
-        El trading implica riesgo y puede ocasionar pérdidas.
-        Los resultados pasados no garantizan resultados futuros.
-      </p>
-
-    </footer>
-
-  </div>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: * Allow: / Disallow: /activar.html Disallow:
+/Bienvenido.html
+
+Sitemap: https://btcproalgo.github.io/btc-pro-web/sitemap.xml
